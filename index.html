@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Currículo</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <form action="main.php" method="post">
+        <div class="cabecalho">
+            <label for="nome">Nome</label>
+            <input type="text" id="nome" name="nome" placeholder="Digite seu nome completo"><br>
+            
+            <label for="telefone">Telefone</label>
+            <input type="text" id="telefone" name="telefone" placeholder="Digite o seu telefone"><br>
+            
+            <label for="email">Email</label>
+            <input type="text" id="email" name="email" placeholder="Digite o seu E-mail"><br>
+            
+            <label for="dataNascimento">Data de Nascimento</label>
+            <input type="date" id="dataNascimento" name="dataNascimento"><br>
+        </div>
+    
+        <div class="objetivos">
+            <label for="objetivos">Objetivos</label><br>
+            <textarea id="objetivos" name="objetivos" rows="5" cols="40" placeholder="Digite seus objetivos aqui..."></textarea><br>
+        </div>
+    
+        <div id="escolaridade-container">
+            <div class="escolaridade" id="escolaridade1">
+                <label for="entidade1">Entidade</label>
+                <input type="text" id="entidade1" name="entidade[]" placeholder="Entidade de ensino"><br>
+                
+                <label for="curso1">Curso</label>
+                <input type="text" id="curso1" name="curso[]" placeholder="Nome do curso"><br>
+                
+                <label for="escolaridade1">Selecione o nível de escolaridade</label>
+                <select id="escolaridade1" name="escolaridade[]">
+                    <option value="" selected disabled>Selecione...</option>
+                    <option value="fundamental_incompleto">Ensino Fundamental Incompleto</option>
+                    <option value="fundamental_completo">Ensino Fundamental Completo</option>
+                    <option value="medio_incompleto">Ensino Médio Incompleto</option>
+                    <option value="medio_completo">Ensino Médio Completo</option>
+                    <option value="tecnico">Curso Técnico</option>
+                    <option value="superior_incompleto">Ensino Superior Incompleto</option>
+                    <option value="superior_completo">Ensino Superior Completo</option>
+                    <option value="pos_graduacao">Pós-Graduação</option>
+                    <option value="mestrado">Mestrado</option>
+                    <option value="doutorado">Doutorado</option>
+                </select><br>
+                
+                <label for="dataEscIni1">Data de início</label>
+                <input type="date" id="dataEscIni1" name="dataEscIni[]"><br>
+                
+                <label for="dataEscCon1">Data de conclusão</label>
+                <input type="date" id="dataEscCon1" name="dataEscCon[]"><br>
+            </div>
+        </div>
+        <button type="button" onclick="addEscolaridade()">Adicionar mais um curso</button>
+    
+        <div id="experiencia-container">
+            <div class="experiencia" id="experiencia1">
+                <label for="empresa1">Empresa</label>
+                <input type="text" id="empresa1" name="empresa[]" placeholder="Nome da Empresa"><br>
+                
+                <label for="cargo1">Cargo</label>
+                <input type="text" id="cargo1" name="cargo[]" placeholder="Nome do cargo"><br>
+                
+                <label for="dataExpIni1">Data de início</label>
+                <input type="date" id="dataExpIni1" name="dataExpIni[]"><br>
+                
+                <label for="dataExpCon1">Data de conclusão</label>
+                <input type="date" id="dataExpCon1" name="dataExpCon[]"><br>
+            </div>
+        </div>
+        <button type="button" onclick="addExperiencia()">Adicionar mais uma experiência</button>
+        <input type="submit" value="Gerar Currículo" id="GerarCurrículo">
+    </form>
+    <script src="script.js"></script>
+</body>
+</html>
