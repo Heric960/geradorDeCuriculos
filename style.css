@@ -1,0 +1,89 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    margin: 0;
+    padding: 20px;
+    color: #333;
+}
+
+.cabecalho, .objetivos, .escolaridade, .experiencia {
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    padding: 15px;
+    margin-bottom: 20px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.cabecalho label, .objetivos label, .escolaridade label, .experiencia label {
+    font-weight: bold;
+    display: block;
+    margin-bottom: 5px;
+    margin-top: 10px;
+}
+
+.cabecalho input, .escolaridade input, .experiencia input, .objetivos textarea, .escolaridade select {
+    width: 100%;
+    padding: 10px;
+    margin-top: 5px;
+    margin-bottom: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    box-sizing: border-box;
+}
+
+.cabecalho input[type="date"], .escolaridade input[type="date"], .experiencia input[type="date"] {
+    width: 48%;
+    margin-right: 2%;
+}
+
+.cabecalho input[type="date"]:last-of-type, .escolaridade input[type="date"]:last-of-type, .experiencia input[type="date"]:last-of-type {
+    margin-right: 0;
+}
+
+#GerarCurrículo{
+    background-color: #007bff;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 10px;   
+}
+
+button {
+    background-color: #007bff;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 10px;
+}
+
+button:hover {
+    background-color: #0056b3;
+}
+
+textarea {
+    resize: vertical;
+}
+
+h2 {
+    font-size: 1.5em;
+    margin-bottom: 10px;
+}
+
+@media (min-width: 768px) {
+    .cabecalho, .objetivos, .escolaridade, .experiencia {
+        padding: 20px;
+    }
+    
+    h2 {
+        font-size: 1.75em;
+    }
+    
+    button {
+        padding: 12px 24px;
+    }
+}
